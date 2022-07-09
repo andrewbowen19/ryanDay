@@ -26,21 +26,24 @@ GameType | Ranked | Unranked
 Day | 12 | 10
 Night | 20 | 7
 
-In all, Ryan Day has a *ranked daytime* win percentage of **83.3%** and an *unranked daytime win %* of **100%**. Interestingly, Day is undefeated at night against ranked opponents, and has only won [**85%** of his games at night vs unranked opponents](https://images.app.goo.gl/EbARkJyPFWaQYVMr6)
+In all, Ryan Day has a *ranked daytime* win percentage of **83.3%** and an *unranked daytime win %* of **100%**. Interestingly, Day is undefeated at night against ranked opponents, and has only won [**85%** of his games at night vs unranked opponents](https://images.app.goo.gl/EbARkJyPFWaQYVMr6)H
 
 ### Analysis
-To see if there was any statistical relationship between game start (Night vs Day), I used the built-in $\chi^2$ contingency test from [`scipy`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html). We're testing with a null hypothesis that there is not a relationship between game start time (Day vs Night). Our test sattistics can be seen below:
+To see if there was any statistical relationship between game start (Night vs Day), I used the built-in $\chi^2$ contingency test from [`scipy`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2_contingency.html). We're testing with a null hypothesis that there is not a relationship between game start time (Day vs Night). Our test statistics can be seen below:
 
-$\chi^2$ | $p$ | 
-:--:|:--:
-1.573 | 0.2096
+$\alpha = 0.05$    
+$H_0$: There is no relationship between game time (Day/Night) and Ryan Day's win percentage as a coach    
+$H_a$: There is a relationship between game time (Day/Night) and Ryan Day's win percentage as a coach
 
-Since $\chi^2 > p$, we cannot reject the null hypothesis, and there is not a statistically significant relationship between the time of day and Ryan Day's win pct. Turns out he's a good coach any time of the day.
+$\chi^2$ | $p$ | $\alpha$
+:--:|:--:|:--:
+1.573 | 0.2096 | 0.05
+
+Since $\alpha = 0.05 > p$, we cannot reject the null hypothesis, and there is not a statistically significant relationship between the time of day and Ryan Day's win pct. Turns out he's a good coach any time of the day.
 
 ### Conclusion
 [The fighter of the night man](https://www.youtube.com/watch?v=VCvr6tzZPTU) tends to win football games any time of day. The Buckeyes have a [few night games already scheduled](https://www.google.com/search?client=safari&rls=en&q=ohio+state+2022+football+schedule&ie=UTF-8&oe=UTF-8&safe=active#sie=t;/m/0fjzsy;6;/m/012hfxch;mt;fp;1;;) for the coming season, so Notre Dame and Toledo aren't necessarily safe at the shoe when the sun goes down. 
 
 Code/data I scraped for this project can be found [here](https://github.com/andrewbowen19/ryanDay). Hope you enjoyed reading and are having a better time with this dumb offseason than I am!
-
 
 *tl;dr* Ryan Day coaches real good at night too.
