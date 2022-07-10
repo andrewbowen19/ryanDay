@@ -9,7 +9,7 @@ import os
 def main():
 
     dfs = []
-    years_coaching = range(2018, 2022)
+    years_coaching = range(2019, 2022)
 
     # Scraping football-reference schedules for each 
     for y in years_coaching:
